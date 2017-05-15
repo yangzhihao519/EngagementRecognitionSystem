@@ -80,7 +80,7 @@ function openFileButton_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 [fileName, pathName] = uigetfile({'*.csv'}, 'File Selector');
 fullPathName = strcat(pathName, fileName); 
-data = csvread(fullPathName);
+data = dlmread(fullPathName);
  
 % Pass the data to Feature Extraction
 feature = FeatureExtraction(data);

@@ -1,4 +1,4 @@
-function [ data_feature_extracted_file ] = FeatureExtraction( X )
+function [ data_feature_extracted ] = FeatureExtraction( X )
 %FEATUREEXTRACTION Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -43,7 +43,7 @@ for j=1:16
 	Y(:,(j-1)*6+6)=engAll(:,j);
 end
 
-% Generate the abbreviate variable names as title
+% Generate the variable names fo
 position={'CAP';'CLT';'CR';'HAP';'HLT';'HR';'LSF';'LSA';'LSI';'NF';'NS';'REF';'RES';'RSF';'RSA';'RSI'};
 TP={'Min';'Max';'Avg';'Std';'Spe';'Eng'};
 
@@ -56,19 +56,12 @@ for i=1:16
     end
 end
 
-% Insert the title of variable names into the data
 data={};
 for j=1:96
 	columns={Title{j}};
-	data2=table(Y(:,j),'VariableNames', columns);
+	data2=table(AggrAll(:,j),'VariableNames', columns);
 	data=horzcat(data,data2);
 end
-
-currentTime = datetime('now','Format','yyyy-mm-dd-HH-MM-SS')
-newFileName = strcat(datestr(currentTime), '.csv')
-writetable(data, newFileName);
-data_feature_extracted_file = newFileName;
-% disp(data);
 
 end
 
