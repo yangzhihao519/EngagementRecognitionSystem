@@ -1,8 +1,8 @@
-function [ text_feature_extracted ] = FeatureExtraction( text )
+function [ data_feature_extracted ] = FeatureExtraction( data )
 %FEATUREEXTRACTION Summary of this function goes here
 %   Detailed explanation goes here
 
-text_feature_extracted = strcat(text, 'feature extraction'); 
+
 
 end
 

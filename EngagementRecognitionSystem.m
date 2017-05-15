@@ -78,9 +78,9 @@ function openFileButton_Callback(hObject, eventdata, handles)
 % hObject    handle to openFileButton (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-[fileName, pathName] = uigetfile({'*.txt'}, 'File Selector');
+[fileName, pathName] = uigetfile({'*.csv'}, 'File Selector');
 fullPathName = strcat(pathName, fileName); 
-data = fileread(fullPathName);
+data = csvread(fullPathName);
  
 % Pass the data to Feature Extraction
 feature = FeatureExtraction(data);
