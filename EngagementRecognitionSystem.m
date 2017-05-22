@@ -22,7 +22,7 @@ function varargout = EngagementRecognitionSystem(varargin)
 
 % Edit the above text to modify the response to help EngagementRecognitionSystem
 
-% Last Modified by GUIDE v2.5 13-May-2017 21:58:35
+% Last Modified by GUIDE v2.5 16-May-2017 16:39:38
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -92,3 +92,45 @@ result = RecognitionClassifier (feature);
 % Show the results
 set(handles.engagedResult, 'String', result);
 set(handles.boredResult, 'String', '18%');
+
+
+% --- Executes on button press in StartRecognition.
+function StartRecognition_Callback(hObject, eventdata, handles)
+% hObject    handle to StartRecognition (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton13.
+function pushbutton13_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton13 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton12.
+function pushbutton12_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton12 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton11.
+function pushbutton11_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton11 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton10.
+function pushbutton10_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton10 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in pushbutton9.
+function pushbutton9_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton9 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)

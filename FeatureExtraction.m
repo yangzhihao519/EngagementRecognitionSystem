@@ -1,6 +1,13 @@
 function [ data_feature_extracted_file ] = FeatureExtraction( X )
-%FEATUREEXTRACTION Summary of this function goes here
-%   Detailed explanation goes here
+% FEATURE EXTRACTION Calculate the main features based on the import file
+%   This function will handle the raw data which contains 6 parts of the body
+%   Chest; Hip; Neck; Left shoulder; Right shoulder; Right elbow.
+%   Each of the part has 2-4 attributes. 
+%   And that makes 16 attributes in total.
+%   For each attributes, there are 6 variables to be calculated:
+%       Maximun value; Minimum value; Average value;
+%       Standard deviation; Speed; Energy.
+%   So there are in total 16*6 = 96 features after the feature extraction
 
 % Initiate the table
 engAll=zeros(108,16);
@@ -64,8 +71,9 @@ for j=1:96
 	data=horzcat(data,data2);
 end
 
-currentTime = datetime('now','Format','yyyy-mm-dd-HH-MM-SS')
-newFileName = strcat(datestr(currentTime), '.csv')
+% Write the data into a new CSV file
+currentTime = datetime('now');
+newFileName = strcat(datestr(currentTime), '.csv');
 writetable(data, newFileName);
 data_feature_extracted_file = newFileName;
 % disp(data);
